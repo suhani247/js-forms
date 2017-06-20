@@ -1,4 +1,5 @@
 function onClickEvent()
 {
-   return alert("You clicked Submit");
+   var name = document.getElementById("name");
+   swal("Name : " + name.value);
 }
