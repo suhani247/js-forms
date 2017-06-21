@@ -4,16 +4,18 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="alert.js"></script>
-<script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+<script src="scripts/alert.js"></script>
+<script src="scripts/sweetalert-master/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="scripts/sweetalert-master/dist/sweetalert.css">
+<script type="text/javascript" src=""></script>
 </head>
 <body>
     <div style= "text-align : center"><h2>JS Forms</h2></div>
     <form class="form-horizontal" onsubmit= "onClickEvent1()">
             <div class="form-group">
-              <label class="control-label col-sm-2" for = "usr">Name:</label>
+              <label class="control-label col-sm-2" for="usr">Name:</label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                  <input type="text" class="form-control" id="usr" placeholder="Enter Name" name="name">
               </div>
             </div>
              <div class="form-group">
@@ -29,13 +31,13 @@
               </div>
             </div>
              <div class="form-group">
-              <label class="control-label col-sm-2" for="comment">Address</label>
+              <label class="control-label col-sm-2" for="address">Address</label>
               <div class="col-sm-10">
                      <textarea class="form-control" rows="5" id="address"></textarea>
               </div>
             </div>
             <div class="form-group">
-              <label class="control-label col-sm-2" for="usr">Organisation</label>
+              <label class="control-label col-sm-2" for="org">Organisation</label>
               <div class="col-sm-10">
                      <input type="text" class="form-control" id="org" placeholder="Organisation" name="org">
               </div>
@@ -44,11 +46,15 @@
              <button type="submit" class="btn btn-default col-sm-offset-5 col-sm-1" >Submit</button>
     </form>
         <script>
-            function onClickEvent1()
-{
-   var name = document.getElementById("name");
-   sweetalert("Name : " + name.value);
-}
+        
+           function onClickEvent1()
+            {
+                var name = document.getElementById("usr");
+                var gender = document.getElementById("gender");
+                var Address = document.getElementById("address");
+                var org = document.getElementById("org");
+                sweetAlert("Name : " + name.value + "Gender : " + gender.value + "Address : " + Address.value + "Organisation : " +  org.value);
+            }
         </script>
     
 </body>
