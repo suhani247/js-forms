@@ -1,5 +1,5 @@
 function onClickEvent()
 {
    var name = document.getElementById("name");
-   swal("Name : " + name.value);
+   alert("Name : " + name.value);
 }
