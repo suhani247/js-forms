@@ -63,31 +63,11 @@
                      <input type="text" class="form-control" id="org" placeholder="Organisation" name="org">
               </div>
             </div>
-            
-             <button type="button" class="btn btn-default col-sm-offset-5 col-sm-1" onclick = "onClickEvent1()">Submit</button>
+            <div class=row>
+             <button type="button" class="btn btn-info col-sm-offset-5 col-sm-1" id ='submitbutton'>Submit</button>
+             <button type="reset" class="btn btn-info col-sm-offset-1 col-sm-1" id ='resetbutton'>Reset</button>
     </form>
     </div>
-        <script>
-        
-           function onClickEvent1()
-            {
-                var name = document.getElementById("usr");
-                var genders = document.getElementsByName("gender");
-                var gender;
-                for(var i= 0, length = genders.length; i<length; i++)
-                {
-                    if(genders[i].checked)
-                    {gender=genders[i].value; break;}
-                }
-                
-                var Address = document.getElementById("address");
-                var org = document.getElementById("org");
-                sweetAlert("Name : " + name.value + "\nGender : " + gender + "\nAddress : " + Address.value + "\nOrganisation : " + org.value);
-               // sweetAlert("\nAddress : " + Address.value + "\nOrganisation : " + org.value);
-               // sweetAlert("Name : " + name.value + "\nGender : " + gender.value);
-    
-            }
-        </script>
-    
+      <script type="text/javascript" src="scripts/alert.js"></script>
 </body>
 </html>
