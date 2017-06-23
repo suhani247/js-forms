@@ -1,9 +1,6 @@
 window.onload = function(){var submitButton = document.querySelector('.btn');
 //var submitButton = document.getElementById('submitbutton')
-submitButton.addEventListener('click',verifyAndShow);}();
-
-function verifyAndShow()
-{
+submitButton.addEventListener('click',function(){
    var details = getDetails();
    var value = verify(details);
    if(value != true)
@@ -19,7 +16,8 @@ function verifyAndShow()
    {
       show(details);
    }
-}
+});}();
+
 
 function getDetails()
 {
@@ -61,6 +59,10 @@ function verify(obj)
    return ('Please select gender');
    if(obj.usrAddress == '')
    return ('Please enter address');
+   if(obj.usrPhone == '')
+   {
+      return ('Please enter mobile no.')
+   }
    if(!obj.usrPhone.match(/^\d+$/))
    {
       return ('Only digits allowed in phone number');
