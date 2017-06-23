@@ -1,6 +1,6 @@
-var submitButton = document.querySelector('.btn');
+window.onload = function(){var submitButton = document.querySelector('.btn');
 //var submitButton = document.getElementById('submitbutton')
-submitButton.addEventListener('click',verifyAndShow);
+submitButton.addEventListener('click',verifyAndShow);}();
 
 function verifyAndShow()
 {
